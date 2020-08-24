@@ -132,7 +132,14 @@ $ npm install -g appium-doctor
 Appium bản desktop để chúng ta bắt element, phục vụ cho việc viết script.
 >>> Vậy nên cần thiết phải cài 2 bản appium, và phải setup WebDriverAgent 2 lần.
 
-##### Đối với bản appium bản Desktop:
+##### Đối với Appium version 1.17 trở lên.
+- Mở Terminal, nhập vào:
+
+```bash
+$ npm ls -g appium-webdriveragent
+```
+
+##### Đối với bản appium bản Desktop (App Version 1.17 trở xuống):
 - Mở Terminal, nhập vào:
 
 ```bash
@@ -141,11 +148,30 @@ $ mkdir -p Resources/WebDriverAgent.bundle
 $ ./Scripts/bootstrap.sh -d 
 ```
 
-##### Đối với bản appium cài bằng Terminal:
+##### Đối với bản appium cài bằng Terminal (App Version 1.17 trở xuống):
 - Mở Terminal, nhập vào:
 
 ```bash
 $ cd /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
+$ mkdir -p Resources/WebDriverAgent.bundle
+$ ./Scripts/bootstrap.sh -d 
+```
+
+
+##### Đối với bản appium bản Desktop (App Version 1.17 trở lên):
+- Mở Terminal, nhập vào:
+
+```bash
+$ cd /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent
+$ mkdir -p Resources/WebDriverAgent.bundle
+$ ./Scripts/bootstrap.sh -d 
+```
+
+##### Đối với bản appium cài bằng Terminal (App Version 1.17 trở lên):
+- Mở Terminal, nhập vào:
+
+```bash
+$ cd /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent
 $ mkdir -p Resources/WebDriverAgent.bundle
 $ ./Scripts/bootstrap.sh -d 
 ```
